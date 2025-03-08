@@ -6,6 +6,11 @@ const routes = [
         name: "contactbook",
         component: ContactBook,
     },
+    {
+        path: "/:pathMacth(.*)*",
+        name: "notfound",
+        component: () => import("@/views/NotFound.vue"),
+    },
 ];
 
 const router = createRouter({
